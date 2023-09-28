@@ -1,10 +1,12 @@
-# TODO App
+# TODO App 
+HOSTING LINK : https://todo-booa.onrender.com
 
 A simple offline TODO app built using React JS.
 
-![App Screenshot](./public/Screenshots/Screenshot%20(43).png)
-![App Screenshot](./public/Screenshots/Screenshot%20(44).png)
-![App Screenshot](./public/Screenshots/Screenshot%20(45).png)
+![App Screenshot](/Screenshots/Screenshot1.png)
+![App Screenshot](/Screenshots/Screenshot2.png)
+![App Screenshot](/Screenshots/Screenshot3.png)
+
 
 ## Features
 
