@@ -35,8 +35,6 @@ npm start
 
 ## Technologies Used
 React JS
-HTML
-CSS (styles are defined in src/styles.css)
 
 ## Folder Structure
 
