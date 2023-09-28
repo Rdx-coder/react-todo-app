@@ -3,10 +3,12 @@
 
 A simple offline TODO app built using React JS.
 
-![App Screenshot][def]
-![App Screenshot][def2]
-![App Screenshot][def3]
 
+![Screenshot 1](https://github.com/Rdx-coder/react-todo-app/blob/master/Screenshots/Screenshot1.png)
+
+![Screenshot 2](https://github.com/Rdx-coder/react-todo-app/blob/master/Screenshots/Screenshot2.png)
+
+![Screenshot 3](https://github.com/Rdx-coder/react-todo-app/blob/master/Screenshots/Screenshot3.png)
 
 ## Features
 
@@ -46,7 +48,3 @@ public/: Contains the HTML template and other static assets.
 package.json: Defines project dependencies and scripts.
 README.md: This file.
 
-
-[def]: ./Screenshots/Screenshot1.png
-[def2]: ./Screenshots/Screenshot2.png
-[def3]: ./Screenshots/Screenshot3.png
