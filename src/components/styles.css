@@ -1,0 +1,64 @@
+/* App styles */
+.App {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 2rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* TodoList styles */
+  .todo-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .todo-input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  
+  .todo-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .todo-card {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .todo-card.completed {
+    text-decoration: line-through;
+  }
+  
+  /* Reset button styles */
+  .reset-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  .reset-button:hover {
+    background-color: #d32f2f;
+  }
+  
