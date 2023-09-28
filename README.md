@@ -1,5 +1,6 @@
 # TODO App 
-HOSTING LINK : https://todo-booa.onrender.com
+
+## HOSTING LINK : https://todo-booa.onrender.com
 
 A simple offline TODO app built using React JS.
 
