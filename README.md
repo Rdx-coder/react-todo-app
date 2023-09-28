@@ -1,12 +1,11 @@
 # TODO App 
-
 ## HOSTING LINK : https://todo-booa.onrender.com
 
 A simple offline TODO app built using React JS.
 
-![App Screenshot](/Screenshots/Screenshot1.png)
-![App Screenshot](/Screenshots/Screenshot2.png)
-![App Screenshot](/Screenshots/Screenshot3.png)
+![App Screenshot][def]
+![App Screenshot][def2]
+![App Screenshot][def3]
 
 
 ## Features
@@ -48,3 +47,8 @@ App.js: The main application component.
 public/: Contains the HTML template and other static assets.
 package.json: Defines project dependencies and scripts.
 README.md: This file.
+
+
+[def]: /Screenshots/Screenshot1.png
+[def2]: /Screenshots/Screenshot2.png
+[def3]: /Screenshots/Screenshot3.png
