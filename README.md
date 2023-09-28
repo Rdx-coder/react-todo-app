@@ -2,7 +2,9 @@
 
 A simple offline TODO app built using React JS.
 
-![App Screenshot](./screenshot.png)
+![App Screenshot](./public/Screenshots/Screenshot%20(43).png)
+![App Screenshot](./public/Screenshots/Screenshot%20(44).png)
+![App Screenshot](./public/Screenshots/Screenshot%20(45).png)
 
 ## Features
 
