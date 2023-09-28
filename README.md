@@ -49,6 +49,6 @@ package.json: Defines project dependencies and scripts.
 README.md: This file.
 
 
-[def]: /Screenshots/Screenshot1.png
-[def2]: /Screenshots/Screenshot2.png
-[def3]: /Screenshots/Screenshot3.png
+[def]: ./Screenshots/Screenshot1.png
+[def2]: ./Screenshots/Screenshot2.png
+[def3]: ./Screenshots/Screenshot3.png
