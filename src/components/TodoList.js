@@ -1,6 +1,17 @@
 import React, { useState } from 'react';
-import TodoCard from './TodoCard';
-import './styles.css';
+import { Container, Typography, TextField, Button, Card, CardContent, IconButton, Grid, Box } from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete';
+import DoneIcon from '@mui/icons-material/Done';
+
+const activeTodoStyle = {
+  border: '2px solid #2196F3',
+  backgroundColor: '#E3F2FD',
+};
+
+const completedTodoStyle = {
+  border: '2px solid #4CAF50',
+  backgroundColor: '#E8F5E9',
+};
 
 function TodoList() {
   const [todos, setTodos] = useState([]);
@@ -22,53 +33,76 @@ function TodoList() {
     setTodos(updatedTodos);
   };
 
+  const deleteTodo = (id) => {
+    const updatedTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(updatedTodos);
+  };
+
   const resetTodos = () => {
     setTodos([]);
   };
 
+  const activeTodos = todos.filter((todo) => !todo.completed);
+  const completedTodos = todos.filter((todo) => todo.completed);
+
   return (
-    <div className="todo-list">
-      <h2>TODO App</h2>
-      <input
-        className="todo-input"
-        type="text"
+    <Container maxWidth="sm">
+      <Typography variant="h2" gutterBottom>
+        TODO App
+      </Typography>
+      <TextField
+        fullWidth
+        variant="outlined"
         placeholder="Add a new todo..."
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
-        onKeyPress={(e) => {
-          if (e.key === 'Enter') {
-            addTodo();
-          }
-        }}
       />
-      <div className="todo-buttons">
-        <button onClick={addTodo}>Add</button>
-        <button className="reset-button" onClick={resetTodos}>
+      <Button variant="contained" color="primary" onClick={addTodo}>
+        Add
+      </Button>
+      <Box mt={2}>
+        <Button variant="contained" color="secondary" onClick={resetTodos}>
           Reset
-        </button>
-      </div>
-      <div>
-        <h3>Active Todos</h3>
-        {todos
-          .filter((todo) => !todo.completed)
-          .map((todo) => (
-            <TodoCard
-              key={todo.id}
-              text={todo.text}
-              completed={todo.completed}
-              onClick={() => markComplete(todo.id)}
-            />
-          ))}
-      </div>
-      <div>
-        <h3>Completed Todos</h3>
-        {todos
-          .filter((todo) => todo.completed)
-          .map((todo) => (
-            <TodoCard key={todo.id} text={todo.text} completed={todo.completed} />
-          ))}
-      </div>
-    </div>
+        </Button>
+      </Box>
+      <Typography variant="h5" gutterBottom style={{ marginTop: '2rem' }}>
+        Active Todos
+      </Typography>
+      {activeTodos.map((todo) => (
+        <Card key={todo.id} style={activeTodoStyle}>
+          <CardContent>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <IconButton color="primary" onClick={() => markComplete(todo.id)}>
+                <DoneIcon />
+              </IconButton>
+              <Typography variant="body1">
+                {todo.text}
+              </Typography>
+              <IconButton color="secondary" onClick={() => deleteTodo(todo.id)}>
+                <DeleteIcon />
+              </IconButton>
+            </div>
+          </CardContent>
+        </Card>
+      ))}
+      <Typography variant="h5" gutterBottom style={{ marginTop: '2rem' }}>
+        Completed Todos
+      </Typography>
+      {completedTodos.map((todo) => (
+        <Card key={todo.id} style={completedTodoStyle}>
+          <CardContent>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <Typography variant="body1" style={{ textDecoration: 'line-through' }}>
+                {todo.text}
+              </Typography>
+              <IconButton color="secondary" onClick={() => deleteTodo(todo.id)}>
+                <DeleteIcon />
+              </IconButton>
+            </div>
+          </CardContent>
+        </Card>
+      ))}
+    </Container>
   );
 }
 
